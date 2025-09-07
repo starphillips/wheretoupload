@@ -2930,3 +2930,14 @@ body.about-page .about-bg {
   isolation: isolate; /* ensures z-index works safely */
 
 
+/* Index page contact section links */
+.index-page #contact a {
+  color: #fff;
+  transition: color 0.2s ease-in-out; /* smooth fade */
+}
+
+/* Hover effect: slightly grey */
+.index-page #contact a:hover,
+.index-page #contact a:focus {
+  color: #ccc; /* light grey */
+}
