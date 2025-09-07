@@ -978,69 +978,142 @@ section,
   }
 }
 
+/* ================================
+   HERO ICON BOXES — COMPACT VERSION
+   Mobile-first, then scale up
+   ================================ */
+
+/* Wrapper spacing & stacking context */
 .hero .icon-boxes {
-  padding-bottom: 60px;
+  position: relative;
+  padding-bottom: 40px;   /* smaller than 60px */
   z-index: 4;
 }
 
+/* Desktop-only background bar behind the boxes */
 @media (min-width: 1200px) {
   .hero .icon-boxes:before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: calc(50% + 20px);
+    inset: auto 0 0 0;    /* left:0; right:0; bottom:0 */
+    height: calc(40% + 12px); /* slightly shorter than before */
     background-color: #0D0F12;
   }
 }
 
+/* ICON BOX — base (phones first) */
 .hero .icon-box {
-  padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: var(--background-color);
-  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  border-color: #e7eaf0;
-  border-radius: 8px;
-  z-index: 1;
-  height: 100%;
   width: 100%;
+  height: 100%;
   text-align: center;
-  border: 2px solid #ffffff;
+
+  /* Compact spacing */
+  padding: 20px 14px;
+
+  /* Visuals */
+  background: var(--background-color);
+  border: 1.5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.12);
+
+  /* Motion */
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  z-index: 1;
 }
 
+/* Title */
 .hero .icon-box .title {
   font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
+  margin-bottom: 8px;
+  font-size: 16px;  /* was 24px */
+  line-height: 1.25;
 }
 
 .hero .icon-box .title a {
   color: #ffffff;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+/* Icon */
 .hero .icon-box .icon {
-  margin-bottom: 20px;
-  padding-top: 10px;
   display: inline-block;
-  transition: all 0.3s ease-in-out;
-  font-size: 48px;
+  margin-bottom: 10px;
+  padding-top: 6px;
+  font-size: 26px;  /* was 48px */
   line-height: 1;
   color: #ffffff;
+  transition: color 0.2s ease, transform 0.25s ease;
 }
 
+/* Hover/active */
 .hero .icon-box:hover {
-  background-color: color-mix(in srgb, #FF007A, white 10%);
-  border: 2px solid #FF007A;
+  background-color: color-mix(in srgb, #FF007A, white 12%);
+  border-color: #FF007A;
+  transform: translateY(-2px);
 }
 
 .hero .icon-box:hover .title a,
 .hero .icon-box:hover .icon {
   color: var(--contrast-color);
 }
+
+/* Focus styles for accessibility */
+.hero .icon-box:focus-within {
+  outline: 2px solid #FF007A;
+  outline-offset: 2px;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero .icon-box,
+  .hero .icon-box .icon,
+  .hero .icon-box .title a {
+    transition: none;
+  }
+}
+
+/* ====== Responsive scaling ====== */
+
+/* Small phones (≤360px): tighten a touch more */
+@media (max-width: 360px) {
+  .hero .icon-box {
+    padding: 16px 12px;
+  }
+  .hero .icon-box .icon { font-size: 24px; }
+  .hero .icon-box .title { font-size: 15px; }
+}
+
+/* ≥576px (sm): give a little breathing room */
+@media (min-width: 576px) {
+  .hero .icon-box { padding: 22px 16px; }
+  .hero .icon-box .icon { font-size: 28px; }
+  .hero .icon-box .title { font-size: 17px; }
+}
+
+/* ≥768px (md): tablet sizing */
+@media (min-width: 768px) {
+  .hero .icon-box { padding: 24px 18px; }
+  .hero .icon-box .icon { font-size: 30px; }
+  .hero .icon-box .title { font-size: 18px; margin-bottom: 10px; }
+}
+
+/* ≥992px (lg): desktop compact */
+@media (min-width: 992px) {
+  .hero .icon-box { padding: 28px 20px; }
+  .hero .icon-box .icon { font-size: 32px; }
+  .hero .icon-box .title { font-size: 19px; }
+}
+
+/* ≥1200px (xl+): still smaller than your original */
+@media (min-width: 1200px) {
+  .hero .icon-box { padding: 30px 22px; }
+  .hero .icon-box .icon { font-size: 34px; }
+  .hero .icon-box .title { font-size: 20px; }
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -2896,10 +2969,15 @@ body.about-page .about-bg {
   position: relative;
   background-image: url('../img/maastricht.png');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  isolation: isolate; /* ensures z-index works safely */
+}
+
+@media (max-width: 767.98px) {
+  .global-bg {
+    background-size: contain;     /* show full image */
+    background-attachment: scroll; /* fixed is buggy on mobile */
+    background-position: top center;
+  }
 }
 
 
