@@ -93,8 +93,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Name of Event</h1>
-              <p class="mb-0">Little text if needed</p>
+              <h1>What Your Event Page Might Look Like</h1>
+              <p class="mb-0">Let's show you what we can offer..</p>
             </div>
           </div>
         </div>
@@ -137,14 +137,17 @@
 
                 <div class="content">
 
-
                   <p>
-                    Text here
+                    This text page can be altered to your liking, and be adapted to suit each event you have. 
                   </p>
 
-                  <p>
-                    This can be anything the event holder would like.
-                  </p>
+                  <p>We hope this provides a taster of what we can do. But really, the limit is endless 
+                    with <em>Where To?</em></p>
+
+                  <p>As students who are attracted to the very same event posts, we can also provide any support and suggestions 
+                    as to how you can bring your visions to life.</p>
+
+                  <p>Because what good is a party if no one knows about it?</p>
 
                   <blockquote>
                     <p>
@@ -159,10 +162,16 @@
                     <li>Last entry time</li>
                   </ul>
 
+                  <h3>What You Can Do to be Featured:</h3>
+                  <ul class="list-unstyled ps-0 m-0">
+                    <li><i class="bi bi-check-circle"></i> <span>Get in contact with us - email, contact form, Instagram etc..</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Provide us with any events, details, images of choice to be featured</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>See your events and organisation page appear here on <em>Where To?</em></span></li>
+                  </ul>
 
                   <h3>You get the idea.</h3>
                   <p>
-                    Text text text.
+                    <a href="{{ url_for('html_page', page_name='contact.html') }}">Let us know if you're interested!</a>
                   </p>
 
                 </div><!-- End post content -->
@@ -193,14 +202,14 @@
               <div class="author-container d-flex align-items-center">
                 <!-- <img src="{{ url_for('static', filename='assets/img/blog/blog-author.png') }}" class="rounded-circle flex-shrink-0" alt=""> -->
                 <div>
-                  <h4>Venue / Event Holder</h4>
+                  <h4>Your Venue / Event Organisation</h4>
                   <div class="social-links">
                     <a href="https://x.com/#"><i class="bi bi-twitter-x"></i></a>
                     <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
                     <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
                   </div>
                   <p>
-                    Info about event holder, location, and their socials attached above
+                    This will link to a page, just about your organisation, what you do, your events and social media links above.
                   </p>
                 </div>
               </div>
@@ -249,40 +258,40 @@
               <div class="post-item">
                 <img src="{{ url_for('static', filename='assets/img/event.png') }}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Event Name</a></h4>
-                  <p>Venue</p>
+                  <h4><a href="blog-details.html">Show Off</a></h4>
+                  <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
                 <img src="{{ url_for('static', filename='assets/img/event.png') }}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Event Name</a></h4>
-                  <p>Venue</p>
+                  <h4><a href="blog-details.html">More Of</a></h4>
+                  <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
                 <img src="{{ url_for('static', filename='assets/img/event.png') }}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Event Name</a></h4>
-                  <p>Venue</p>
+                  <h4><a href="blog-details.html">Your Events</a></h4>
+                  <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
                 <img src="{{ url_for('static', filename='assets/img/event.png') }}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Event Name</a></h4>
-                  <p>Venue</p>
+                  <h4><a href="blog-details.html">Right Here</a></h4>
+                  <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
                 <img src="{{ url_for('static', filename='assets/img/event.png') }}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Event Name</a></h4>
-                  <p>Venue</p>
+                  <h4><a href="blog-details.html">On <em>Where To?</em></a></h4>
+                  <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
@@ -297,7 +306,7 @@
                 <li><a href="#">Chosen</a></li>
                 <li><a href="#">By</a></li>
                 <li><a href="#">Event</a></li>
-                <li><a href="#">Holder</a></li>
+                <li><a href="#">Organisation</a></li>
                 <li><a href="#">E.G.</a></li>
                 <li><a href="{{ url_for('html_page', page_name='categories.html') }}?filter=filter-house">House</a></li>
                 <li><a href="#">Clubnight</a></li>
