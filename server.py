@@ -1,13 +1,13 @@
 from flask import Flask, render_template, url_for, request, redirect, flash
 import csv, os, re
-from models import db, Comment
 from sqlalchemy import text
 from dotenv import load_dotenv
-load_dotenv()
+from models import db, Comment
 
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
