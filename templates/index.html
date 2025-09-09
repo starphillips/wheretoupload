@@ -53,30 +53,30 @@
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="/" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="./static/assets/img//logos/logo.png" alt="" class="logo-img">
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html"  class="active">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown"><a href="categories.html"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="/"  class="active">Home<br></a></li>
+            <li><a href="/about">About</a></li>
+            <li class="dropdown"><a href="/categories"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="categories.html?filter=filter-house">House</a></li>
-                <li><a href="categories.html?filter=filter-techno">Techno</a></li>
-                <li><a href="categories.html?filter=filter-pop">Pop</a></li>
-                <li><a href="categories.html?filter=filter-rb">R&B</a></li>
-                <li><a href="categories.html">Explore</a></li>
+                <li><a href="/categories?filter=filter-house">House</a></li>
+                <li><a href="/categories?filter=filter-techno">Techno</a></li>
+                <li><a href="/categories?filter=filter-pop">Pop</a></li>
+                <li><a href="/categories?filter=filter-rb">R&B</a></li>
+                <li><a href="/categories">Explore</a></li>
               </ul>
-            <li class="dropdown"><a href="organisers.html"><span>Organisers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="/organisers"><span>Organisers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="organisers.html?filter=filter-org">Event Organisers</a></li>
-                <li><a href="organisers.html?filter=filter-venue">Venues</a></li>
-                <li><a href="organisers.html">Explore</a></li>
+                <li><a href="/organisers?filter=filter-org">Event Organisers</a></li>
+                <li><a href="/organisers?filter=filter-venue">Venues</a></li>
+                <li><a href="/organisers">Explore</a></li>
               </ul>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -98,12 +98,12 @@
             <h2><span>Never Miss a Good<br> Event Again.</span></h2>
             <p>Latest events found all in one place.</p>
             <div class="d-flex">
-              <a href="categories.html" class="btn-get-started">Explore More</a>
+              <a href="/categories" class="btn-get-started">Explore More</a>
               <!--<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
             </div>
           </div>
           <div class="col-lg-5 order-1 order-lg-2">
-            <a href="about.html">
+            <a href="/about">
               <img src="./static/assets/img/logos/logo2.png" class="img-fluid" alt="Logo">
             </a>
           </div>
@@ -117,28 +117,28 @@
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-sun"></i></div>
-                <h4 class="title"><a href="categories.html?filter=filter-house" class="stretched-link">House</a></h4>
+                <h4 class="title"><a href="/categories?filter=filter-house" class="stretched-link">House</a></h4>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-volume-up"></i></div>
-                <h4 class="title"><a href="categories.html?filter=filter-techno" class="stretched-link">Techno</a></h4>
+                <h4 class="title"><a href="/categories?filter=filter-techno" class="stretched-link">Techno</a></h4>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-vinyl-fill"></i></div>
-                <h4 class="title"><a href="categories.html?filter=filter-rb" class="stretched-link">R&B</a></h4>
+                <h4 class="title"><a href="/categories?filter=filter-rb" class="stretched-link">R&B</a></h4>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
                 <div class="icon"><i class="bi bi-boombox"></i></div>
-                <h4 class="title"><a href="categories.html?filter=filter-pop" class="stretched-link">Pop</a></h4>
+                <h4 class="title"><a href="/categories?filter=filter-pop" class="stretched-link">Pop</a></h4>
               </div>
             </div><!--End Icon Box -->
 
@@ -171,7 +171,7 @@
                 <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p> <a href="about.html" class="post-category">Find out more </a></p>
+              <!-- <p> <a href="/about" class="post-category">Find out more </a></p> -->
 
               <h2 class="title">
                 Events coming soon..
@@ -181,7 +181,57 @@
                 <img src="./static/assets/img/logos/logo.png" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Where To?</p>
-                  <p class="post-category">Events Website</p>
+                  <p class="post-category"><a href="/about">Find out more </a></p>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="./static/assets/img/event.PNG" alt="" class="img-fluid">
+              </div>
+
+              <!-- <p> <a href="/about" class="post-category">Find out more </a></p> -->
+
+              <h2 class="title">
+                CALLING ALL EVENT ORGANISERS..
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="./static/assets/img/logos/logo.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author"><a href="{{ url_for('event_page', page_name='event1') }}"></a>See our Event Pages Template</p>
+                  <p class="post-category"><a href="{{ url_for('event_page', page_name='event1') }}">Find out more </a></p>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+                    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="./static/assets/img/about2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <!-- <p> <a href="/about" class="post-category">Find out more </a></p> -->
+
+              <h2 class="title">
+                CALLING ALL EVENT ORGANISERS..
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="./static/assets/img/logos/logo.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author"><a href="/ven-page"></a>Feature Yourself on <em>Where To?</em></p>
+                  <p class="post-category"><a href="/ven-page">Find out more</a></p>
                   </p>
                 </div>
               </div>
@@ -216,7 +266,7 @@
               </div>
               <h3>Coming soon..</h3>
               <p>Where To?</p>
-              <a href="about.html" class="readmore stretched-link">Find out more... <i class="bi bi-arrow-right"></i></a>
+              <a href="/about" class="readmore stretched-link">Find out more... <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -322,7 +372,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="/" class="logo d-flex align-items-center">
             <span class="sitename">Where To?</span>
           </a>
           <p>Never miss a good event again.</p>
@@ -337,22 +387,22 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="categories.html">Events</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/categories" >Events</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Categories</h4>
             <ul>
-              <li><a href="categories.html?filter=filter-house">House</a></li>
-              <li><a href="categories.html?filter=filter-techno">Techno</a></li>
-              <li><a href="categories.html?filter=filter-pop">Pop</a></li>
-              <li><a href="categories.html?filter=filter-rb">R&B</a></li>
-              <li><a href="categories.html">Explore</a></li>
+              <li><a href="/categories?filter=filter-house">House</a></li>
+              <li><a href="/categories?filter=filter-techno">Techno</a></li>
+              <li><a href="/categories?filter=filter-pop">Pop</a></li>
+              <li><a href="/categories?filter=filter-rb">R&B</a></li>
+              <li><a href="/categories">Explore</a></li>
             </ul>
         </div>
 

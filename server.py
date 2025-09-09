@@ -50,7 +50,7 @@ def ensure_db_awake():
 def shutdown_session(exception=None):
     db.session.remove()
 
-    
+
 CONTACTS_FILE = os.path.join(BASE_DIR, "database.csv")
 print("Using database file at:", CONTACTS_FILE)
 
@@ -90,8 +90,11 @@ def event_page(page_name):
     return render_template(template_path, thread=slug, comments=comments)
 
 
-@app.route('/<string:page_name>')
+@app.route("/<string:page_name>")
 def html_page(page_name):
+    # if user didn't include .html, add it
+    if not page_name.endswith(".html"):
+        page_name = f"{page_name}.html"
     return render_template(page_name)
 
 URL_RE = re.compile(r'^https?://', re.IGNORECASE)

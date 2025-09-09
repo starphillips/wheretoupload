@@ -51,30 +51,30 @@
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="/index" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="./static/assets/img//logos/logo.png" alt="" class="logo-img">
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown"><a href="categories.html"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="/index">Home<br></a></li>
+            <li><a href="/about">About</a></li>
+            <li class="dropdown"><a href="/categories"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="categories.html?filter=filter-house">House</a></li>
-                <li><a href="categories.html?filter=filter-techno">Techno</a></li>
-                <li><a href="categories.html?filter=filter-pop">Pop</a></li>
-                <li><a href="categories.html?filter=filter-rb">R&B</a></li>
-                <li><a href="categories.html">Explore</a></li>
+                <li><a href="/categories?filter=filter-house">House</a></li>
+                <li><a href="/categories?filter=filter-techno">Techno</a></li>
+                <li><a href="/categories?filter=filter-pop">Pop</a></li>
+                <li><a href="/categories?filter=filter-rb">R&B</a></li>
+                <li><a href="/categories">Explore</a></li>
               </ul>
-            <li class="dropdown"><a href="organisers.html"><span>Organisers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="/organisers"><span>Organisers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="organisers.html?filter=filter-org">Event Organisers</a></li>
-                <li><a href="organisers.html?filter=filter-Date">Venues</a></li>
-                <li><a href="organisers.html">Explore</a></li>
+                <li><a href="/organisers?filter=filter-org">Event Organisers</a></li>
+                <li><a href="/organisers?filter=filter-Date">Venues</a></li>
+                <li><a href="/organisers">Explore</a></li>
               </ul>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -102,7 +102,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="categories.html">Organisers</a></li>
+            <li><a href="/categories">Organisers</a></li>
             <li class="current">Venue/Organiser</li>
           </ol>
         </div>
@@ -129,9 +129,9 @@
 
                 <!-- <div class="meta-top">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ url_for('event_page', page_name='event1') }}">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ url_for('event_page', page_name='event1') }}"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ url_for('event_page', page_name='event1') }}">12 Comments</a></li>
                   </ul>
                 </div>End meta top -->
 
@@ -234,41 +234,41 @@
               <h3 class="widget-title">Upcoming Events at Yours...</h3>
 
               <div class="post-item">
-                <img src="./static/assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
+                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Show Off</a></h4>
+                  <h4><a href="{{ url_for('event_page', page_name='event1') }}">Show Off</a></h4>
                   <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
-                <img src="./static/assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
+                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Your Events</a></h4>
+                  <h4><a href="{{ url_for('event_page', page_name='event1') }}">Your Events</a></h4>
                   <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
-                <img src="./static/assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
+                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Right Here</a></h4>
+                  <h4><a href="{{ url_for('event_page', page_name='event1') }}">Right Here</a></h4>
                   <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
-                <img src="./static/assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
+                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">On <em>Where To?</em></a></h4>
+                  <h4><a href="{{ url_for('event_page', page_name='event1') }}">On <em>Where To?</em></a></h4>
                   <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
 
               <div class="post-item">
-                <img src="./static/assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
+                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html"></a>Event Here</h4>
+                  <h4><a href="{{ url_for('event_page', page_name='event1') }}"></a>Event Here</h4>
                   <p>Date</p>
                 </div>
               </div><!-- End recent post item-->
@@ -280,11 +280,11 @@
 
               <h3 class="widget-title">Explore Events by Categories</h3>
               <ul class="mt-3">
-                <li><a href="categories.html?filter=filter-house">House</a></li>
-                <li><a href="categories.html?filter=filter-techno">Techno</a></li>
-                <li><a href="categories.html?filter=filter-pop">Pop</a></li>
-                <li><a href="categories.html?filter=filter-rb">R&B</a></li>
-                <li><a href="categories.html">Explore More</a></li>
+                <li><a href="/categories?filter=filter-house">House</a></li>
+                <li><a href="/categories?filter=filter-techno">Techno</a></li>
+                <li><a href="/categories?filter=filter-pop">Pop</a></li>
+                <li><a href="/categories?filter=filter-rb">R&B</a></li>
+                <li><a href="/categories">Explore More</a></li>
               </ul>
 
             </div><!--/Categories Widget -->
@@ -300,7 +300,7 @@
                 <li><a href="#">Event</a></li>
                 <li><a href="#">Holder</a></li>
                 <li><a href="#">E.G.</a></li>
-                <li><a href="categories.html?filter=filter-house">House</a></li>
+                <li><a href="/categories?filter=filter-house">House</a></li>
                 <li><a href="#">Clubnight</a></li>
               </ul>
 
@@ -320,7 +320,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="/index" class="logo d-flex align-items-center">
             <span class="sitename">Where To?</span>
           </a>
           <p>Never miss a good event again.</p>
@@ -335,10 +335,10 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="categories.html">Events</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/categories">Events</a></li>
+            <li><a href="/contact">Contact Us</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
@@ -346,11 +346,11 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Categories</h4>
             <ul>
-              <li><a href="categories.html?filter=filter-house">House</a></li>
-              <li><a href="categories.html?filter=filter-techno">Techno</a></li>
-              <li><a href="categories.html?filter=filter-pop">Pop</a></li>
-              <li><a href="categories.html?filter=filter-rb">R&B</a></li>
-              <li><a href="categories.html">Explore</a></li>
+              <li><a href="/categories?filter=filter-house">House</a></li>
+              <li><a href="/categories?filter=filter-techno">Techno</a></li>
+              <li><a href="/categories?filter=filter-pop">Pop</a></li>
+              <li><a href="/categories?filter=filter-rb">R&B</a></li>
+              <li><a href="/categories">Explore</a></li>
             </ul>
         </div>
 
