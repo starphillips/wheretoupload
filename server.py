@@ -3,8 +3,18 @@ import csv, os, re
 from sqlalchemy import text
 from dotenv import load_dotenv
 from models import db, Comment
+from flask import Response
+
 
 app = Flask(__name__)
+
+@app.route("/favicon.ico")
+def favicon():
+    return Response(status=204)  # No Content
+
+@app.route("/robots.txt")
+def robots():
+    return Response("User-agent: *\nDisallow:\n", mimetype="text/plain")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
@@ -12,6 +22,15 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "change-me")
+
+
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "pool_pre_ping": True, 
+    "pool_recycle": 280,     
+    "pool_size": 5,
+    "max_overflow": 5,
+    "pool_timeout": 30,
+}
 
 if not app.config["SQLALCHEMY_DATABASE_URI"]:
     raise RuntimeError("DATABASE_URL is not set")
@@ -21,6 +40,17 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+def ensure_db_awake():
+    try:
+        db.session.execute(text("SELECT 1"))
+    except (OperationalError, InterfaceError):
+        db.session.rollback() 
+
+
+def shutdown_session(exception=None):
+    db.session.remove()
+
+    
 CONTACTS_FILE = os.path.join(BASE_DIR, "database.csv")
 print("Using database file at:", CONTACTS_FILE)
 
