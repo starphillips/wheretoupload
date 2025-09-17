@@ -164,24 +164,24 @@
 
         <div class="row gy-4">
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article>
 
               <div class="post-img">
-                <img src="./static/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                <a href="{{ url_for('event_page', page_name='moonlight') }}"><img src="./static/assets/img/events/moonlight.jpeg" alt="" class="img-fluid"></a>
               </div>
 
-              <!-- <p> <a href="/about" class="post-category">Find out more </a></p> -->
+              <p> <a href="{{ url_for('event_page', page_name='moonlight') }}" class="post-category">25 September 2025 </a></p>
 
               <h2 class="title">
-                Events coming soon..
+                <a href="{{ url_for('event_page', page_name='moonlight') }}">Moonlight Flashbacks: Pitbull Edition</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="./static/assets/img/logos/logo.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <!-- <img src="./static/assets/img/logos/logo.png" alt="" class="img-fluid post-author-img flex-shrink-0"> -->
                 <div class="post-meta">
-                  <p class="post-author">Where To?</p>
-                  <p class="post-category"><a href="/about">Find out more </a></p>
+                  <p class="post-author">Complex</p>
+                  <p class="post-category">Nightclub</p>
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Locations</h2>
+        <h2>Organisers</h2>
         <p>Explore new places in Maastricht</p>
       </div><!-- End Section Title -->
 
@@ -262,7 +262,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <div class="icon">
-                <i class="bi bi-buildings"></i>
+                <i class="bi bi-balloon-heart"></i>
               </div>
               <h3>Coming soon..</h3>
               <p>Where To?</p>

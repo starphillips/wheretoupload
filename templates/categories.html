@@ -136,20 +136,19 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-house filter-techno filter-pop filter-rb filter-other">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-pop filter-other">
               <div class="portfolio-content h-100">
-                  <img src="./static/assets/img/event.PNG" class="img-fluid" alt="App 1 image">
+                  <a href="{{ url_for('event_page', page_name='moonlight') }}"><img src="./static/assets/img/events/moonlight.jpeg" class="img-fluid" alt="App 1 image"></a>
                 <hr style="margin: 10px 0;">
                 <div class="portfolio-info">
-                  <h4><a href="/about" title="More Details">Events Coming Soon</a></h4>
-                  <p><a href="/about">Find Out More </a></p>
+                  <h4><a href="{{ url_for('event_page', page_name='moonlight') }}" title="More Details">Moonlight Flashbacks: Pitbull Edition</a></h4>
                 </div>
               </div> 
             </div> <!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-house filter-techno filter-pop filter-rb filter-other">
               <div class="portfolio-content h-100">
-                  <img src="./static/assets/img/event.PNG" class="img-fluid" alt="App 1 image">
+                  <img src="./static/assets/img/event.png" class="img-fluid" alt="App 1 image">
                 <hr style="margin: 10px 0;">
                 <div class="portfolio-info">
                   <h4><a href="{{ url_for('event_page', page_name='event1') }}" title="More Details">CALLING ALL EVENT ORGANISERS</a></h4>
