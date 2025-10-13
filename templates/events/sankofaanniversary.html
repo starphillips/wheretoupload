@@ -93,8 +93,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Mediterranea: One Sea, One Party</h1>
-              <p class="mb-0">Cavo</p>
+              <h1>Sankofa Nights: Anniversay Edition</h1>
+              <p class="mb-0">Muziekgieterji</p>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
         <div class="container">
           <ol>
             <li><a href="{{ url_for('html_page', page_name='categories.html') }}">Events</a></li>
-            <li class="current">Mediterranea: One Sea, One Party</li>
+            <li class="current">Sankofa Nights: Anniversay Edition</li>
           </ol>
         </div>
       </nav>
@@ -121,11 +121,11 @@
               <article class="article">
 
                 <div class="post-img">
-                  <img src="{{ url_for('static', filename='assets/img/events/mediterranea.jpg') }}" alt="" class="img-fluid">
+                  <img src="{{ url_for('static', filename='assets/img/events/sankofa-ae.JPG') }}" alt="" class="img-fluid">
                 </div>
 
-                <h2 class="title">Mediterranea: One Sea, One Party</h2>
-                <h4>09.10.2025 | 11PM - 2AM</h4>
+                <h2 class="title">Sankofa Nights: Anniversay Edition</h2>
+                <h4>SATURDAY 15.11.2025 | 11:30PM - 4:30AM</h4>
 
                 <!-- <div class="meta-top">
                   <ul>
@@ -138,20 +138,20 @@
                 <div class="content">
 
                   <p>
-                    Join Maastricht’s one and only Mediterranean party where the sea, the sun, and the vibes come alive in the city!
+                    Start the countdown!!
                   </p>
 
                   <p>
-                    Get carried away by the vibes of the hottest *Italian, Spanish, and international hits!*
+                    Sankofa Nights is returning for the 1 year anniversary edition at Muziekgieterji!
                   </p>
 
                   <p>
-                    Maastricht turns Mediterranean for one night only: *tickets are going fast*, don’t miss the wave 🎟️
+                    Get ready for a night full of emotion, experiencing the greatest Afro House and Funky House tracks
                   </p>
 
                   <blockquote>
                     <p>
-                      <a href="https://shop.paylogic.com/1eedd84d50654b67802b39ca1fe47404">GET YOUR TICKETS HERE</a>
+                      <!-- <a href="https://shop.paylogic.com/1eedd84d50654b67802b39ca1fe47404"></a> --> TICKETS COMING SOON...
                     </p>
                   </blockquote>
 
@@ -159,8 +159,8 @@
                   <h3>IMPORTANT INFO</h3>
                   <ul>
                     <li>18+</li>
-                    <li>Last Entry: 12am</li>
-                    <li>Where's the<a href="https://maps.app.goo.gl/XbUdRJGN79vsoy7SA" target="blank"> Party?</a></li>
+                    <!-- <li>Last Entry: 12am</li> -->
+                    <li>Where's the<a href="https://maps.app.goo.gl/z6m6chP97xKbdhCW6" target="blank"> Party?</a></li>
                   </ul>
 
                   <!-- <h5>What You Can Do to be Featured:</h5>
@@ -200,22 +200,21 @@
 
             <div class="container">
               <div class="author-container d-flex align-items-center">
-                <!-- <img src="{{ url_for('static', filename='assets/img/blog/blog-author.png') }}" class="rounded-circle flex-shrink-0" alt=""> -->
+                <img src="{{ url_for('static', filename='assets/img/organisers/sankofa/sankofa.png') }}" class="rounded-circle flex-shrink-0" alt="">
                 <div>
-                  <h4>Venue: Cavo</h4>
-                  <!-- <div class="social-links">
-                    <a href="https://x.com/#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
-                    <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                  <h4>Sankofa Nights</h4>
+                  <br><p>
+                    Check out Sankofa's other pages here
+                  </p>
+                  <div class="social-links">
+                    <a href="https://www.tiktok.com/@sankofa.nights"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.instagram.com/sankofa.nights?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="biu bi-instagram"></i></a>
                   </div>
-                  <p>
-                    This will link to a page, just about your organisation, what you do, your events and social media links above.
-                  </p> -->
                 </div>
               </div>
             </div>
 
-          </section><!-- /Blog Author Section -->
+          </section>
 
           {% include "_comments.html" %}
 
@@ -302,9 +301,9 @@
 
               <h3 class="widget-title">Tags</h3>
               <ul>
-                <li><a>Italian</a></li>
-                <li><a>Spanish</a></li>
-                <li><a>International Hits</a></li>
+                <li><a>Afrohouse</a></li>
+                <li><a>Funky House</a></li>
+                <li><a href="{{ url_for('html_page', page_name='categories.html') }}?filter=filter-house">House</a></li>
                 <li><a>Clubnight</a></li>
               </ul>
 
